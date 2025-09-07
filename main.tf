@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-west-2"
+  region = "ap-southeast-2"
 }
 
 data "aws_availability_zones" "available" {
@@ -22,7 +22,7 @@ module "vpc" {
   version = "5.19.0"
 
   name = "learn-hcp-terraform"
-  cidr = "10.0.0.0/16"
+  cidr = "10.0.0.0/24"
 
   azs             = data.aws_availability_zones.available.names
   private_subnets = ["10.0.1.0/24", "10.0.2.0/24"]
