@@ -7,4 +7,5 @@ resource "aws_vpc" "tj_vpc2_from_tf" {
   instance_tenancy = "default"
   tags = {
     Name = "tj_vpc_from_tf"
+  }
 }
