@@ -9,3 +9,11 @@ resource "aws_vpc" "tj_vpc2_from_tf" {
     Name = "tj_vpc_from_tf"
   }
 }
+
+resource "aws_vpc" "tj_vpc3_from_tf" {
+  cidr_block = "10.0.0.0/16"
+  instance_tenancy = "default"
+  tags = {
+    Name = "tj_vpc3_from_tf"
+  }
+}
